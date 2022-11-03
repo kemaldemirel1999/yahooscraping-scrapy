@@ -12,4 +12,7 @@ class YahooscrapingItem(scrapy.Item):
     stock_name = scrapy.Field()
     intraday_price = scrapy.Field()
     price_change = scrapy.Field()
+    market_cap = scrapy.Field()
+    volume = scrapy.Field()
+    
     pass

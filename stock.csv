@@ -1,2 +1,4 @@
-intraday_price,price_change,stock_name
-"+0.37, ,(+0.17%)","Pre-Market:, ,04:28AM EDT",Microsoft Corporation (MSFT)
+intraday_price,market_cap,price_change,stock_name,volume
+"+0.37, ,(+0.17%)",1.641T,"Pre-Market:, ,04:28AM EDT",Microsoft Corporation (MSFT),"38,407,008"
+"+0.68, ,(+0.74%)",939.781B,"Pre-Market:, ,04:41AM EDT","Amazon.com, Inc. (AMZN)","130,718,329"
+"-0.80, ,(-0.55%)",2.307T,"Pre-Market:, ,04:28AM EDT",Apple Inc. (AAPL),"93,604,623"
