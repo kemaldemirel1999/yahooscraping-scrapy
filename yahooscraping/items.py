@@ -15,4 +15,5 @@ class YahooscrapingItem(scrapy.Item):
     market_cap = scrapy.Field()
     volume = scrapy.Field()
     
+    
     pass

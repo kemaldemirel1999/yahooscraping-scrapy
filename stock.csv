@@ -1,4 +1,6 @@
 intraday_price,market_cap,price_change,stock_name,volume
-"+0.37, ,(+0.17%)",1.641T,"Pre-Market:, ,04:28AM EDT",Microsoft Corporation (MSFT),"38,407,008"
-"+0.68, ,(+0.74%)",939.781B,"Pre-Market:, ,04:41AM EDT","Amazon.com, Inc. (AMZN)","130,718,329"
-"-0.80, ,(-0.55%)",2.307T,"Pre-Market:, ,04:28AM EDT",Apple Inc. (AAPL),"93,604,623"
+"-1.21, ,(-0.83%)",2.307T,(-0.83%),Apple Inc. (AAPL),"93,604,623"
+"-0.01, ,(-0.04%)",113.162B,(-0.04%),Intel Corporation (INTC),"51,956,099"
+"+0.10, ,(+0.11%)",1.126T,(+0.11%),Alphabet Inc. (GOOG),"43,553,551"
+"+0.51, ,(+0.55%)",939.781B,(+0.55%),"Amazon.com, Inc. (AMZN)","130,718,329"
+"+0.07, ,(+0.08%)",240.071B,(+0.08%),"Meta Platforms, Inc. (META)","71,821,058"
