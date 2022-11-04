@@ -1,0 +1,6 @@
+intraday_price,market_cap,price_change,stock_name,volume
+"-1.14, ,(-0.82%)",2.307T,(-0.82%),Apple Inc. (AAPL),"97,918,516"
+"0.00, ,(0.00%)",911.012B,(0.00%),"Amazon.com, Inc. (AMZN)","136,683,303"
+"+0.17, ,(+0.62%)",113.039B,(+0.62%),Intel Corporation (INTC),"39,678,189"
+"+0.16, ,(+0.19%)",1.08T,(+0.19%),Alphabet Inc. (GOOG),"48,510,364"
+"-0.13, ,(-0.15%)",235.749B,(-0.15%),"Meta Platforms, Inc. (META)","60,664,012"
