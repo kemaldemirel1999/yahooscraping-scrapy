@@ -12,12 +12,22 @@ class MostactiveSpider(scrapy.Spider):
     def start_requests(self):
         urls = ['https://finance.yahoo.com/most-active']
         for url in urls:
-            yield scrapy.Request(url=url, callback=self.get_people_also_watch)
+            yield scrapy.Request(url=url, callback=self.get_pages)
             
-    def get_people_also_watch(self, response):
+    def get_page_stocks(self, response):
         stocks = response.xpath('//*[@id="scr-res-table"]/div[1]/table/tbody//tr/td[1]/a').css('::text').extract()
         for stock in stocks:
             yield scrapy.Request(url=f'https://finance.yahoo.com/quote/{stock}?p={stock}', callback=self.parse)
+            
+    def get_pages(self, response):
+        count = str(response.xpath('//*[@id="fin-scr-res-table"]/div[1]/div[1]/span[2]/span').css(
+            '::text').extract())
+        total_results = int(count.split()[-2])
+        total_offsets = total_results // 25 + 1
+        offset_list = [i * 25 for i in range(total_offsets)]
+        for offset in offset_list:
+            yield scrapy.Request(url=f'https://finance.yahoo.com/most-active?count=25&offset={offset}',
+                                 callback=self.get_page_stocks)
     
     def parse(self, response):
         print(response)
@@ -27,8 +37,6 @@ class MostactiveSpider(scrapy.Spider):
         items['price_change'] = response.xpath('//*[@id="quote-header-info"]/div[3]/div[1]/div[2]/span[1]/fin-streamer[2]/span').css('::text').extract()
         items['market_cap'] = response.xpath('//*[@id="quote-summary"]/div[2]/table/tbody/tr[1]/td[2]').css('::text').extract()
         items['volume'] = response.xpath('//*[@id="quote-summary"]/div[1]/table/tbody/tr[7]/td[2]/fin-streamer').css('::text').extract()
-        
-
         
         yield items
         
